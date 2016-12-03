@@ -14,15 +14,16 @@
     <table border="0">
         <thead>
             <tr>
-                <td ng-click="col='frstname';desc=!desc">firstname</td>
-                <td ng-click="col='lastname';desc=!desc">lastname</td>
-                <td ng-click="col='gender';desc=!desc">gender</td>
-                <td ng-click="col='salary';desc=!desc">salary</td>
-                <td ng-click="col='birthday';desc=!desc">birthday</td>
+                <td ng-click="name='frstname';order=!order">firstname</td>
+                <td ng-click="name='lastname';order=!order">lastname</td>
+                <td ng-click="name='gender';order=!order">gender</td>
+                <td ng-click="name='salary';order=!order">salary</td>
+                <td ng-click="name='birthday';order=!order">birthday</td>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="s in search | filter:searchs:value |orderBy:col:desc">
+            <tr ng-repeat="s in search | filter:searchs:value |orderBy:name:order">
+                <!--过滤 排序-->
                 <td>{{s.firstname}}</td>
                 <td>{{s.lastname}}</td>
                 <td>{{s.gender}}</td>

@@ -32,11 +32,11 @@ angular.module("myApp",[])
 
     ];
 
-    $scope.search=search;
+    $scope.search=search;//将数据暴露出去
     $scope.TextSearch="";
     $scope.TextSearch2="";
-    $scope.col = 'firstname';
-    $scope.desc = 0;
+    $scope.name = 'firstname';
+    $scope.order = 0;
     $scope.searchs=function(obj){
         if($scope.TextSearch!=""){
             if(obj.firstname.toLowerCase().indexOf($scope.TextSearch.toLowerCase())!=-1){
