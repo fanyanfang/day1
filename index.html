@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div ng-controller="myController" class="box">
+    <p><input type="text" ng-model="TextSearch" placeholder="FirstName"><input type="text" ng-model="TextSearch2" placeholder="LastName"></p>
+    <table border="0">
+        <thead>
+            <tr>
+                <td ng-click="col='frstname';desc=!desc">firstname</td>
+                <td ng-click="col='lastname';desc=!desc">lastname</td>
+                <td ng-click="col='gender';desc=!desc">gender</td>
+                <td ng-click="col='salary';desc=!desc">salary</td>
+                <td ng-click="col='birthday';desc=!desc">birthday</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="s in search | filter:searchs:value |orderBy:col:desc">
+                <td>{{s.firstname}}</td>
+                <td>{{s.lastname}}</td>
+                <td>{{s.gender}}</td>
+                <td>{{s.salary}}</td>
+                <td>{{s.birthday}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="js/angular.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>

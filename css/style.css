@@ -1,0 +1,17 @@
+.box input{
+    width:180px;
+    height:18px;
+    font-size:18px;
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+table td{
+    border:1px solid #333;
+    text-align: center;
+    line-height: 30px;
+}
+thead td{
+    font-weight: bold;
+}
